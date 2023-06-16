@@ -1,32 +1,30 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
-} from '@heroicons/react/24/outline';
+  TrophyIcon
+} from "@heroicons/react/24/outline";
 
-import ArcDevIcon from '../components/Icon/ArcDevIcon';
-import DevReadyIcon from '../components/Icon/DevReadyIcon';
-import GithubIcon from '../components/Icon/GithubIcon';
-import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TuringIcon from '../components/Icon/TuringIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import ArcDevIcon from "../components/Icon/ArcDevIcon";
+import DevReadyIcon from "../components/Icon/DevReadyIcon";
+import GithubIcon from "../components/Icon/GithubIcon";
+import LinkedInIcon from "../components/Icon/LinkedInIcon";
+import StackOverflowIcon from "../components/Icon/StackOverflowIcon";
+import porfolioImage1 from "../images/portfolio/portfolio-1.jpg";
+import porfolioImage2 from "../images/portfolio/portfolio-2.jpg";
+import porfolioImage3 from "../images/portfolio/portfolio-3.jpg";
+import porfolioImage4 from "../images/portfolio/portfolio-4.jpg";
+import porfolioImage5 from "../images/portfolio/portfolio-5.jpg";
+import porfolioImage6 from "../images/portfolio/portfolio-6.jpg";
+import porfolioImage7 from "../images/portfolio/portfolio-7.jpg";
+import porfolioImage8 from "../images/portfolio/portfolio-8.jpg";
+import porfolioImage9 from "../images/portfolio/portfolio-9.jpg";
+import porfolioImage10 from "../images/portfolio/portfolio-10.jpg";
+import porfolioImage11 from "../images/portfolio/portfolio-11.jpg";
+import profilepic from "../images/profilepic.jpg";
 import {
   About,
   ContactSection,
@@ -36,8 +34,11 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  TimelineItem,
-} from './dataDef';
+  TimelineItem
+} from "./dataDef";
+import TuringIcon from"../components/Icon/TuringIcon"';
+import { calculateAge } from"../helper/date"';
+import heroImage from"../images/header-background.webp"';
 
 /**
  * Page meta data
@@ -91,8 +92,8 @@ export const heroData: Hero = {
     },
     {
       href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
+      text: "Contact",
+      primary: false
     },
   ],
 };
@@ -100,19 +101,21 @@ export const heroData: Hero = {
 /**
  * About section
  */
+const birthday = new Date("1994-04-20");
+const age = calculateAge(birthday);
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Minas Gerais, Brazil', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Brazilian', Icon: FlagIcon},
-    {label: 'Interests', text: 'Beach Tennis, Beer, Friends', Icon: SparklesIcon},
-    {label: 'Study', text: 'Universidade Federal de Juiz de Fora', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Nursa', Icon: BuildingOffice2Icon},
-  ],
+    { label: "Working location", text: `Remote | Minas Gerais, Brazil`, Icon: MapIcon },
+    { label: "Age", text: `${age}`, Icon: CalendarIcon },
+    { label: "Nationality", text: "Brazilian", Icon: FlagIcon },
+    { label: "Hobbies", text: "Sports, Bars, Friends", Icon: SparklesIcon },
+    { label: "Study", text: "Universidade Federal de Juiz de Fora", Icon: AcademicCapIcon },
+    { label: "Sports", text: "Beach Tennis, Volleyball, Football", Icon: TrophyIcon }
+  ]
 };
 
 /**
