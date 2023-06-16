@@ -16,6 +16,10 @@ const Home: FC = memo(() => {
             https://github.com/tbakerx/react-resume-template
           </a>
         </li>
+
+        <li>
+          <a href="http://www.freepik.com">Designed by starline / Freepik</a>
+        </li>
       </ul>
       <Analytics />;
     </>
