@@ -1,9 +1,19 @@
 {
-  "name": "react-resume-template",
-  "short_name": "react-resume-template",
+  "name": "Gustavo Lopes Resume",
+  "short_name": "Gustavo Lopes Resume",
   "icons": [
-    {"src": "/icon-192.png", "type": "image/png", "sizes": "192x192"},
-    {"src": "/icon-512.png", "type": "image/png", "sizes": "512x512"}
+      {
+       "src": "/icons-72.png",
+       "sizes": "72x72",
+       "type": "image/png",
+       "density": "1.5"
+      },
+      {
+       "src": "/icons-96.png",
+       "sizes": "96x96",
+       "type": "image/png",
+       "density": "2.0"
+      }
   ],
   "theme_color": "#515455",
   "background_color": "#515455",
