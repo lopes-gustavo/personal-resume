@@ -1,4 +1,4 @@
-import {FC, memo, useCallback, useMemo, useState} from 'react';
+import {ChangeEvent, FC, FormEvent, memo, useCallback, useMemo, useState} from 'react';
 
 interface FormData {
   name: string;
@@ -19,7 +19,7 @@ const ContactForm: FC = memo(() => {
   const [data, setData] = useState<FormData>(defaultData);
 
   const onChange = useCallback(
-    <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
+    <T extends HTMLInputElement | HTMLTextAreaElement>(event: ChangeEvent<T>): void => {
       const {name, value} = event.target;
 
       const fieldData: Partial<FormData> = {[name]: value};
@@ -30,7 +30,7 @@ const ContactForm: FC = memo(() => {
   );
 
   const handleSendMessage = useCallback(
-    async (event: React.FormEvent<HTMLFormElement>) => {
+    async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       /**
        * This is a good starting point to wire up your form submission logic
