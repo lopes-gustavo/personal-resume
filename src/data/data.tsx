@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import ArcDevIcon from '../components/Icon/ArcDevIcon';
-import DevReadyIcon from "../components/Icon/DevReadyIcon";
+import DevReadyIcon from '../components/Icon/DevReadyIcon';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
@@ -59,7 +59,7 @@ export const SectionId = {
   Stats: 'stats',
 } as const;
 
-export type SectionId = typeof SectionId[keyof typeof SectionId];
+export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 /**
  * Hero section
@@ -70,14 +70,14 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
+        I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working at{' '}
+        <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
         registrar and site builder.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me training <strong className="text-stone-100">beach tennis</strong>,
-        drinking some <strong className="text-stone-100">beer</strong>, or simply laying down on the beautiful
-        beaches of <strong className="text-stone-100">Rio de Janeiro</strong>.
+        drinking some <strong className="text-stone-100">beer</strong>, or simply laying down on the beautiful beaches
+        of <strong className="text-stone-100">Rio de Janeiro</strong>.
       </p>
     </>
   ),
