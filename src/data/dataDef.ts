@@ -1,4 +1,3 @@
-import {StaticImageData} from 'next/image';
 import {FC, ForwardRefExoticComponent, ReactElement, SVGProps} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
@@ -52,26 +51,15 @@ export interface AboutItem {
 /**
  * Skills section
  */
-
 export interface Skill {
   name: string;
   level: number;
-  max?: number;
+  years: number;
 }
 
 export interface SkillGroup {
   name: string;
   skills: Skill[];
-}
-
-/**
- * Portfolio section
- */
-export interface PortfolioItem {
-  title: string;
-  description: string;
-  url: string;
-  image: string | StaticImageData;
 }
 
 /**
@@ -97,11 +85,6 @@ export const ContactType = {
   Email: 'Email',
   Phone: 'Phone',
   Location: 'Location',
-  Github: 'Github',
-  LinkedIn: 'LinkedIn',
-  Facebook: 'Facebook',
-  Twitter: 'Twitter',
-  Instagram: 'Instagram',
 } as const;
 
 export type ContactType = (typeof ContactType)[keyof typeof ContactType];

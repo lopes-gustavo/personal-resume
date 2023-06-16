@@ -16,25 +16,13 @@ import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TuringIcon from'../components/Icon/TuringIcon';
 import {calculateAge} from '../helper/date';
 import heroImage from'../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilePic from '../images/profilepic.jpg';
 import {
   About,
   ContactSection,
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
   SkillGroup,
   Social,
   TimelineItem,
@@ -55,7 +43,6 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
@@ -104,7 +91,7 @@ export const heroData: Hero = {
 const birthday = new Date('1994-04-20');
 const age = calculateAge(birthday);
 export const aboutData: About = {
-  profileImageSrc: profilepic,
+  profileImageSrc: profilePic,
   description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
@@ -123,19 +110,37 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Backend development',
     skills: [
       {
-        name: 'English',
-        level: 10,
+        name: 'Node.js',
+        level: 9,
+        years: 7,
       },
       {
-        name: 'French',
+        name: 'Golang',
+        level: 8,
+        years: 2,
+      },
+      {
+        name: 'Nest.js',
+        level: 8,
+        years: 2,
+      },
+      {
+        name: 'Python',
+        level: 7,
+        years: 4,
+      },
+      {
+        name: 'Java',
+        level: 5,
+        years: 1,
+      },
+      {
+        name: 'Ruby',
         level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
+        years: 1,
       },
     ],
   },
@@ -143,33 +148,24 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'Angular',
         level: 9,
+        years: 5,
       },
       {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
+        name: 'Vue',
         level: 8,
+        years: 2,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'React',
+        level: 7,
+        years: 2,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'Next.js',
+        level: 7,
+        years: 2,
       },
     ],
   },
@@ -177,96 +173,124 @@ export const skills: SkillGroup[] = [
     name: 'Mobile development',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Ionic',
+        level: 8,
+        years: 2,
       },
       {
         name: 'Flutter',
-        level: 4,
+        level: 6,
+        years: 2,
+      },
+    ],
+  },
+  {
+    name: 'Cloud Development',
+    skills: [
+      {
+        name: 'AWS',
+        level: 9,
+        years: 5,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Firebase',
+        level: 8,
+        years: 6,
+      },
+      {
+        name: 'GCP',
+        level: 8,
+        years: 2,
+      },
+      {
+        name: 'Azure',
+        level: 5,
+        years: 1,
+      },
+    ],
+  },
+  {
+    name: 'Databases',
+    skills: [
+      {
+        name: 'Postgres',
+        level: 8,
+        years: 5,
+      },
+      {
+        name: 'MySQL',
+        level: 7,
+        years: 2,
+      },
+      {
+        name: 'Redis',
+        level: 7,
+        years: 4,
+      },
+      {
+        name: 'DynamoDB',
+        level: 5,
+        years: 2
+      },
+      {
+        name: 'MongoDB',
+        level: 5,
+        years: 1,
+      },
+      {
+        name: 'OracleDB',
+        level: 4,
+        years: 1,
+      },
+    ],
+  },
+  {
+    name: 'DevOps',
+    skills: [
+      {
+        name: 'Github Actions',
+        level: 8,
+        years: 2,
+      },
+      {
+        name: 'Azure DevOps',
+        level: 7,
+        years: 1,
+      },
+      {
+        name: 'Terraform',
+        level: 7,
+        years: 5,
+      },
+      {
+        name: 'Docker',
+        level: 7,
+        years: 5,
+      },
+      {
+        name: 'Kubernetes',
+        level: 5,
+        years: 1,
+      },
+    ],
+  },
+  {
+    name: 'Testing',
+    skills: [
+      {
+        name: 'Cypress',
+        level: 6,
+        years: 3,
+      },
+      {
+        name: 'Playwright',
+        level: 5,
+        years: 1,
       },
     ],
   },
 ];
 
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage11,
-  },
-];
-
-/**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
 export const education: TimelineItem[] = [
   {
     date: 'April 2007',
@@ -310,7 +334,6 @@ export const experience: TimelineItem[] = [
 /**
  * Contact section
  */
-
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
   description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
@@ -324,11 +347,6 @@ export const contact: ContactSection = {
       type: ContactType.Location,
       text: 'Victoria BC, Canada',
       href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Github,
-      text: 'lopes-gustavo',
-      href: 'https://github.com/lopes-gustavo',
     },
   ],
 };
