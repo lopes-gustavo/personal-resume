@@ -8,6 +8,8 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
+import ArcDevIcon from '../components/Icon/ArcDevIcon';
+import DevReadyIcon from "../components/Icon/DevReadyIcon";
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
@@ -68,14 +70,14 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
+        I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
         at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
         registrar and site builder.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me training <strong className="text-stone-100">beach tennis</strong>,
+        drinking some <strong className="text-stone-100">beer</strong>, or simply laying down on the beautiful
+        beaches of <strong className="text-stone-100">Rio de Janeiro</strong>.
       </p>
     </>
   ),
@@ -331,7 +333,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/lopes-gustavo'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8038345/gustavo-lopes'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/gustavomlopes/'},
+  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8038345/gustavo-lopes'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/lopes-gustavo'},
+  {label: 'Arc.dev', Icon: ArcDevIcon, href: 'https://arc.dev/@lopesgustavo'},
+  {label: 'DevReady', Icon: DevReadyIcon, href: 'https://profile.devready.io/developers/gustavo-moraes-l'},
 ];
