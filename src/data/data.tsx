@@ -106,12 +106,12 @@ export const aboutData: About = {
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
+    {label: 'Location', text: 'Minas Gerais, Brazil', Icon: MapIcon},
     {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Nationality', text: 'Brazilian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Beach Tennis, Beer, Friends', Icon: SparklesIcon},
+    {label: 'Study', text: 'Universidade Federal de Juiz de Fora', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Nursa', Icon: BuildingOffice2Icon},
   ],
 };
 
