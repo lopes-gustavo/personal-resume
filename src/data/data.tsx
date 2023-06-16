@@ -13,6 +13,7 @@ import DevReadyIcon from '../components/Icon/DevReadyIcon';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+import TuringIcon from '../components/Icon/TuringIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -336,6 +337,7 @@ export const socialLinks: Social[] = [
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/gustavomlopes/'},
   {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8038345/gustavo-lopes'},
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/lopes-gustavo'},
+  {label: 'Turing', Icon: TuringIcon, href: 'https://matching.turing.com/developer-resume/1b8d51d4d21fdfbb3deb46b9654a0b1b5812af68937b46'},
   {label: 'Arc.dev', Icon: ArcDevIcon, href: 'https://arc.dev/@lopesgustavo'},
   {label: 'DevReady', Icon: DevReadyIcon, href: 'https://profile.devready.io/developers/gustavo-moraes-l'},
 ];
