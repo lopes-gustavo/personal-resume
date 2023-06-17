@@ -145,8 +145,44 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
+    name: 'Backend tools',
+    skills: [
+      {
+        name: 'Terraform',
+        level: 8,
+        years: 5,
+      },
+      {
+        name: 'Docker',
+        level: 7,
+        years: 5,
+      },
+      {
+        name: 'Kubernetes',
+        level: 5,
+        years: 1,
+      },
+      {
+        name: 'RabbitMQ',
+        level: 5,
+        years: 3,
+      },
+      {
+        name: 'SNS/SQS',
+        level: 5,
+        years: 3,
+      },
+    ],
+  },
+
+  {
     name: 'Frontend development',
     skills: [
+      {
+        name: 'Typescript',
+        level: 9,
+        years: 6,
+      },
       {
         name: 'Angular',
         level: 9,
@@ -189,7 +225,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'AWS',
-        level: 9,
+        level: 8,
         years: 5,
       },
       {
@@ -199,7 +235,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'GCP',
-        level: 8,
+        level: 7,
         years: 2,
       },
       {
@@ -255,21 +291,6 @@ export const skills: SkillGroup[] = [
       {
         name: 'Azure DevOps',
         level: 7,
-        years: 1,
-      },
-      {
-        name: 'Terraform',
-        level: 7,
-        years: 5,
-      },
-      {
-        name: 'Docker',
-        level: 7,
-        years: 5,
-      },
-      {
-        name: 'Kubernetes',
-        level: 5,
         years: 1,
       },
     ],
