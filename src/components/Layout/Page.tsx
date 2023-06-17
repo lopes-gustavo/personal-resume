@@ -20,9 +20,13 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
         <link href="/favicon.ico" rel="icon" sizes="any" />
         <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
         <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-            
+
         <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
+        <link color="#209CEE" href="/safari-pinned-tab.svg" rel="mask-icon" />
         <link href="/site.webmanifest" rel="manifest" />
+
+        {/* Theme color */}
+        <meta content="#209CEE" name="theme-color" />
 
         {/* Open Graph : https://ogp.me/ */}
         <meta content={title} property="og:title" />
