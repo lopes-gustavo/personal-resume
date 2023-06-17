@@ -19,14 +19,18 @@ export const SkillGroup: FC<PropsWithChildren<{skillGroup: SkillGroupType}>> = m
 SkillGroup.displayName = 'SkillGroup';
 
 export const Skill: FC<{skill: SkillType}> = memo(({skill}) => {
-  const {name, level} = skill;
+  const {name, level, years} = skill;
   const percentage = useMemo(() => Math.round((level / 10) * 100), [level]);
 
   return (
     <div className="flex flex-col">
       <span className="ml-2 text-sm font-medium">{name}</span>
       <div className="h-5 w-full overflow-hidden rounded-full bg-neutral-300">
-        <div className="h-full rounded-full bg-orange-400" style={{width: `${percentage}%`}} />
+        <div className="flex items-center text-xs h-full rounded-full bg-orange-400 pl-2" style={{
+          width: `${percentage}%`,
+        }} >
+          {years} {years > 1 ? 'years' : 'year'}
+        </div>
       </div>
     </div>
   );
