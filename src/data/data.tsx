@@ -1,6 +1,5 @@
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
@@ -40,12 +39,11 @@ export const homePageMeta: HomepageMeta = {
  * Section definition
  */
 export const SectionId = {
-  Hero: 'hero',
+  Home: 'home',
   About: 'about',
-  Contact: 'contact',
   Resume: 'resume',
   Skills: 'skills',
-  Stats: 'stats',
+  Contact: 'contact',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -55,27 +53,24 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Gustavo Lopes.`,
+  name: `Gustavo Lopes`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working at{' '}
-        <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        A Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong>,
+        passionate by technology, with over 7 years of professional experience.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training <strong className="text-stone-100">beach tennis</strong>,
-        drinking some <strong className="text-stone-100">beer</strong>, or simply laying down on the beautiful beaches
-        of <strong className="text-stone-100">Rio de Janeiro</strong>.
+        Outside of work, you can catch me doing sports (mostly Beach Tennis and Volleyball)
+        or hanging out with my friends in the company of a good ale.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: `#${SectionId.Resume}`,
       text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
+      primary: false,
     },
     {
       href: `#${SectionId.Contact}`,
@@ -366,8 +361,7 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Minas Gerais, Brazil',
     },
   ],
 };
