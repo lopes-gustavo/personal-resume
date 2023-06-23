@@ -4,6 +4,7 @@ import dayjs, {Dayjs} from 'dayjs';
 import ArcDevIcon from '../components/Icon/ArcDevIcon';
 import DevReadyIcon from '../components/Icon/DevReadyIcon';
 import GithubIcon from '../components/Icon/GithubIcon';
+import HimalayasIcon from '../components/Icon/HimalayasIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TuringIcon from '../components/Icon/TuringIcon';
@@ -409,4 +410,5 @@ export const socialLinks: Social[] = [
   },
   {label: 'Arc.dev', Icon: ArcDevIcon, href: 'https://arc.dev/@lopesgustavo'},
   {label: 'DevReady', Icon: DevReadyIcon, href: 'https://profile.devready.io/developers/gustavo-moraes-l'},
+  {label: 'Himalayas', Icon: HimalayasIcon, href: 'https://himalayas.app/@gustavolopes'},
 ];
