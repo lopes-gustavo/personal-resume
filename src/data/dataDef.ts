@@ -1,3 +1,4 @@
+import {Dayjs} from 'dayjs';
 import {FC, ForwardRefExoticComponent, ReactElement, SVGProps} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
@@ -66,10 +67,12 @@ export interface SkillGroup {
  * Resume section
  */
 export interface TimelineItem {
-  date: string;
+  dateStart: Dayjs;
+  dateEnd: Dayjs | null;
   location: string;
   title: string;
-  content: JSX.Element;
+  content?: string[];
+  skills?: string[];
 }
 
 /**
