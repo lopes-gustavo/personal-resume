@@ -307,7 +307,7 @@ export const experience: TimelineItem[] = [
       'Improved deployment cycle time from 1 week to 2 days by introducing trunk-based development with feature flags',
       'Responsible for running regressions, deployments and releases',
     ],
-    skills: ['Angular', 'Node.js', 'Nest.js', 'GCP', 'Engineering Management'],
+    skills: ['Angular', 'Node.js', 'Python', 'Nest.js', 'GCP', 'Engineering Management'],
   },
   {
     title: 'Fullstack Software Engineer / Tech Lead',
@@ -335,7 +335,7 @@ export const experience: TimelineItem[] = [
       'Improved the application unreliable infrastructure with alarms and logs. Update the manually created infrastructure using Terraform',
       'Created internal web services (Angular + PWA, mostly) to replace several Excel worksheets used by the business teams',
     ],
-    skills: ['Angular', 'Python', 'AWS', 'GraphQL'],
+    skills: ['Angular', 'React', 'Python', 'AWS', 'GraphQL', 'Flask'],
   },
   {
     title: 'Fullstack Software Engineer',
@@ -346,7 +346,7 @@ export const experience: TimelineItem[] = [
       'Responsible for migrating a legacy monolithic Ruby system to Scala microservices',
       'Developed a search microservice using ElasticSearch, Scala and React.js, along with Google Maps API and Kubernetes',
     ],
-    skills: ['React.js', 'Angular', 'Scala', 'Ruby', 'Ruby on Rails', 'Elasticsearch'],
+    skills: ['React.js', 'Angular', 'Scala', 'Ruby', 'Ruby on Rails', 'Elasticsearch', 'GraphQL'],
   },
   {
     title: 'Backend Software Engineer',
@@ -359,6 +359,29 @@ export const experience: TimelineItem[] = [
       'Improved the project’s structure, using better software design patterns',
     ],
     skills: ['Node.js', 'Azure', 'Jenkins'],
+  },
+  {
+    title: 'Fullstack Software Engineer',
+    dateStart: experienceDate(5, 2017),
+    dateEnd: experienceDate(1, 2018),
+    location: 'Mais.im',
+    content: [
+      'Responsible for the system front end, using jQuery, SASS and HTML5. Used Electron/PhoneGap for desktop and mobile applications',
+      'Improved application response time by structuring Amazon Services (Elastic Load Balance, CDN) and instantiating proper cache',
+      'Enhanced deployment speed and security by creating automated scripts',
+      `Improved company's overall communication by implementing Github issues and code versioning`,
+    ],
+    skills: ['Node.js', 'jQuery', 'PhoneGap', 'Electron.js'],
+  },
+  {
+    title: 'Software Engineer - Intern',
+    dateStart: experienceDate(9, 2016),
+    dateEnd: experienceDate(5, 2017),
+    location: 'Wabtec Passenger Transit',
+    content: [
+      `Helped analysing application's error logs and trying to find where the issue could be`
+    ],
+    skills: ['C#', '.NET'],
   },
 ];
 
