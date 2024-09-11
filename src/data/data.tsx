@@ -15,19 +15,19 @@ import HimalayasIcon from '../components/Icon/HimalayasIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TuringIcon from '../components/Icon/TuringIcon';
+import EsferaEnergia from '../images/companyLogos/EsferaEnergia.png';
+import EstrategiaEducacional from '../images/companyLogos/EstrategiaEducacional.jpg';
+import Gympass from '../images/companyLogos/Gympass.jpg';
+import MaisIm from '../images/companyLogos/MaisIm.png';
+import Nursa from '../images/companyLogos/Nursa.png';
+import RedemptionGames from '../images/companyLogos/RedemptionGames.jpg';
+import Santander from '../images/companyLogos/Santander.png';
+import UFJF from '../images/companyLogos/UFJF.png';
+import UniversityOfNottingham from '../images/companyLogos/UniversityOfNottingham.jpg';
+import Wabtec from '../images/companyLogos/Wabtec.png';
 import heroImage from '../images/header-background.webp';
 import profilePic from '../images/profilepic.jpg';
-import {
-  About,
-  ContactSection,
-  ContactType,
-  ExperienceTimelineItem,
-  Hero,
-  HomepageMeta,
-  SkillGroup,
-  Social,
-  TimelineItem,
-} from './dataDef';
+import { About, ContactSection, ContactType, Hero, HomepageMeta, SkillGroup, Social, TimelineItem } from './dataDef';
 
 /**
  * Page meta data
@@ -186,12 +186,13 @@ export const skills: SkillGroup[] = [
 
 const experienceDate = (month: number, year: number): Dayjs => dayjs(`${year}-${month}-01`);
 
-export const experience: ExperienceTimelineItem[] = [
+export const experience: TimelineItem[] = [
   {
     title: 'Full Stack Software Engineer',
     dateStart: experienceDate(6, 2023),
     dateEnd: experienceDate(9, 2024),
     location: 'Redemption Games',
+    url: RedemptionGames,
     content: [
       `Lead engineer on the backend side of the company's mobile app games`,
       `Sole engineer responsible for the internal company CMS tool, using React + Typescript`,
@@ -204,6 +205,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(4, 2022),
     dateEnd: experienceDate(6, 2023),
     location: 'Nursa',
+    url: Nursa,
     content: [
       'Manager of 4 teams',
       'Migrated source code from Gitlab to Github, reducing costs by 30%',
@@ -219,6 +221,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(4, 2020),
     dateEnd: experienceDate(4, 2022),
     location: 'Estratégia Educacional',
+    url: EstrategiaEducacional,
     content: [
       'Technical leader of 2 teams',
       'Created the authentication and authorization flow for more than 1 million users',
@@ -233,6 +236,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(4, 2019),
     dateEnd: experienceDate(4, 2020),
     location: 'Esfera Energia',
+    url: EsferaEnergia,
     content: [
       `Technical leader of the developers' team (7 people)`,
       'Introduced JIRA and scrum to better control of tasks planning and to generate reports for managers',
@@ -247,6 +251,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(12, 2018),
     dateEnd: experienceDate(4, 2019),
     location: 'Gympass',
+    url: Gympass,
     content: [
       'Responsible for migrating a legacy monolithic Ruby system to Scala microservices',
       'Developed a search microservice using ElasticSearch, Scala and React.js, along with Google Maps API and Kubernetes',
@@ -258,6 +263,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(1, 2018),
     dateEnd: experienceDate(12, 2018),
     location: 'Santander Bank',
+    url: Santander,
     content: [
       'Responsible for developing the second-factor security module of Santander Bank, delivering APIs for all the main channels, with more than 40 million requests a day. Used NodeJS, Typescript, Oracle DB, Docker, Mocha',
       'Responsible for raising demands and drawing technical solutions',
@@ -270,6 +276,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(5, 2017),
     dateEnd: experienceDate(1, 2018),
     location: 'Mais.im',
+    url: MaisIm,
     content: [
       'Responsible for the system front end, using jQuery, SASS and HTML5. Used Electron/PhoneGap for desktop and mobile applications',
       'Improved application response time by structuring Amazon Services (Elastic Load Balance, CDN) and instantiating proper cache',
@@ -283,6 +290,7 @@ export const experience: ExperienceTimelineItem[] = [
     dateStart: experienceDate(9, 2016),
     dateEnd: experienceDate(5, 2017),
     location: 'Wabtec Passenger Transit',
+    url: Wabtec,
     content: [`Helped analysing application's error logs and trying to find where the issue could be`],
     skills: ['C#', '.NET'],
   },
@@ -294,12 +302,14 @@ export const education: TimelineItem[] = [
     dateStart: experienceDate(2, 2012),
     dateEnd: experienceDate(11, 2017),
     location: 'Universidade Federal de Juiz de Fora',
+    url: UFJF,
   },
   {
     title: 'Electronic Engineering',
     dateStart: experienceDate(9, 2014),
     dateEnd: experienceDate(9, 2015),
     location: 'University of Nottingham',
+    url: UniversityOfNottingham,
   },
 ];
 

@@ -67,15 +67,14 @@ export interface SkillGroup {
  * Resume section
  */
 export interface TimelineItem {
+  title: string;
   dateStart: Dayjs;
   dateEnd: Dayjs | null;
   location: string;
-  title: string;
-}
+  url: string;
 
-export interface ExperienceTimelineItem extends TimelineItem {
-  content: string[];
-  skills: string[];
+  content?: string[];
+  skills?: string[];
 }
 
 /**

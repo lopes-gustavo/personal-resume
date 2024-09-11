@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import { FC, memo } from 'react';
 
-import type { ExperienceTimelineItem } from '../../../data/dataDef';
+import type { TimelineItem } from '../../../data/dataDef';
 
 const Chip: FC<{ value: string }> = memo(({ value }) => {
   return (
@@ -10,18 +11,24 @@ const Chip: FC<{ value: string }> = memo(({ value }) => {
   );
 });
 
-const TimelineItem: FC<{ item: ExperienceTimelineItem }> = memo(({ item }) => {
-  const { title, dateStart, dateEnd, location, content, skills } = item;
+const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
+  const { title, dateStart, dateEnd, location, content, skills, url } = item;
   return (
     <div className="flex flex-col pb-8 text-left last:pb-0">
-      <div className="flex flex-col pb-4">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <div className="flex items-center justify-center gap-x-2 md:justify-start">
-          <span className="flex-0 text-sm font-medium italic">{location}</span>
-          <span>•</span>
-          <span className="flex-1 text-sm">
-            {dateStart.format('MMM YYYY')} - {dateEnd?.format('MMM YYYY') || 'Current'}
-          </span>
+      <div className="flex gap-3 items-center pb-4 relative">
+        <Image alt="" height={33} objectFit="cover" src={url} width={33} />
+
+        <div className="flex flex-col justify-items-center">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <div className="flex items-center justify-center gap-x-2 md:justify-start">
+            <span className="relative flex items-center gap-2">
+              <span className="text-sm font-medium italic">{location}</span>
+            </span>
+            <span>•</span>
+            <span className="flex-1 text-sm">
+              {dateStart.format('MMM YYYY')} - {dateEnd?.format('MMM YYYY') || 'Current'}
+            </span>
+          </div>
         </div>
       </div>
 
