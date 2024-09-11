@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import Image from 'next/image';
-import { FC, memo } from 'react';
 
 import { aboutData, SectionId } from '../../data/data';
-import Section from '../Layout/Section';
+import { Section } from '../Layout/Section';
 
-const About: FC = memo(() => {
+export const About = () => {
   const { profileImageSrc, description, aboutItems } = aboutData;
+
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.About}>
       <div className={classNames('grid grid-cols-1 gap-y-4', { 'md:grid-cols-4': !!profileImageSrc })}>
@@ -17,6 +17,7 @@ const About: FC = memo(() => {
             </div>
           </div>
         )}
+
         <div className={classNames('col-span-1 flex flex-col gap-y-6', { 'md:col-span-3': !!profileImageSrc })}>
           <div className="flex flex-col gap-y-2">
             <h2 className="text-2xl font-bold text-white">About me</h2>
@@ -26,6 +27,7 @@ const About: FC = memo(() => {
               </p>
             ))}
           </div>
+
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {aboutItems.map(({ label, text, Icon }, idx) => (
               <li className="col-span-1 flex  items-start gap-x-2" key={idx}>
@@ -39,7 +41,4 @@ const About: FC = memo(() => {
       </div>
     </Section>
   );
-});
-
-About.displayName = 'About';
-export default About;
+};

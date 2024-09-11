@@ -55,7 +55,7 @@ export interface SkillGroup {
 /**
  * Resume section
  */
-export interface TimelineItem {
+export interface TimelineItemData {
   title: string;
   dateStart: Dayjs;
   dateEnd: Dayjs | null;

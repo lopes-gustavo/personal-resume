@@ -1,8 +1,6 @@
-import { FC, memo } from 'react';
+import { Icon, IconProps } from './Icon';
 
-import Icon, { IconProps } from './Icon';
-
-const DevReadyIcon: FC<IconProps> = memo(props => (
+export const DevReadyIcon = (props: IconProps) => (
   <Icon {...props}>
     <path
       clipRule="evenodd"
@@ -11,6 +9,4 @@ const DevReadyIcon: FC<IconProps> = memo(props => (
       fillRule="evenodd"
     />
   </Icon>
-));
-
-export default DevReadyIcon;
+);

@@ -1,18 +1,16 @@
 import Image from 'next/image';
-import { FC, memo } from 'react';
 
-import type { TimelineItem } from '../../../data/dataDef';
+import type { TimelineItemData } from '../../../data/dataDef';
 
-const Chip: FC<{ value: string }> = memo(({ value }) => {
-  return (
-    <div className="m-1 flex items-center justify-center rounded-full px-2 py-1 text-base font-medium border border-gray-400 select-none">
-      <div className="max-w-full flex-initial text-xs font-normal leading-none">{value}</div>
-    </div>
-  );
-});
+const Chip = ({ value }: { value: string }) => (
+  <div className="m-1 flex items-center justify-center rounded-full px-2 py-1 text-base font-medium border border-gray-400 select-none">
+    <div className="max-w-full flex-initial text-xs font-normal leading-none">{value}</div>
+  </div>
+);
 
-const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
+export const TimelineItem = ({ item }: { item: TimelineItemData }) => {
   const { title, dateStart, dateEnd, location, content, skills, url } = item;
+
   return (
     <div className="flex flex-col pb-8 text-left last:pb-0">
       <div className="flex gap-3 items-center pb-4 relative">
@@ -24,7 +22,9 @@ const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
             <span className="relative flex items-center gap-2">
               <span className="text-sm font-medium italic">{location}</span>
             </span>
+
             <span>•</span>
+
             <span className="flex-1 text-sm">
               {dateStart.format('MMM YYYY')} - {dateEnd?.format('MMM YYYY') || 'Current'}
             </span>
@@ -39,7 +39,4 @@ const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
       <div className="flex flex-row flex-wrap mx-auto mt-3">{skills?.map(s => <Chip value={s} />)}</div>
     </div>
   );
-});
-
-TimelineItem.displayName = 'TimelineItem';
-export default TimelineItem;
+};

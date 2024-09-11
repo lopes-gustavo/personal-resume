@@ -2,10 +2,10 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
 import { heroData, SectionId } from '../../data/data';
-import Section from '../Layout/Section';
-import Socials from '../Socials';
+import { Section } from '../Layout/Section';
+import { Socials } from '../Socials';
 
-export default function Hero() {
+export const Hero = () => {
   const { imageSrc, name, description, actions } = heroData;
 
   return (
@@ -49,4 +49,4 @@ export default function Hero() {
       </div>
     </Section>
   );
-}
+};

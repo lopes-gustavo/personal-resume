@@ -8,13 +8,13 @@ import {
 } from '@heroicons/react/24/outline';
 import dayjs, { Dayjs } from 'dayjs';
 
-import ArcDevIcon from '../components/Icon/ArcDevIcon';
-import DevReadyIcon from '../components/Icon/DevReadyIcon';
-import GithubIcon from '../components/Icon/GithubIcon';
-import HimalayasIcon from '../components/Icon/HimalayasIcon';
-import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TuringIcon from '../components/Icon/TuringIcon';
+import { ArcDevIcon } from '../components/Icon/ArcDevIcon';
+import { DevReadyIcon } from '../components/Icon/DevReadyIcon';
+import { GithubIcon } from '../components/Icon/GithubIcon';
+import { HimalayasIcon } from '../components/Icon/HimalayasIcon';
+import { LinkedInIcon } from '../components/Icon/LinkedInIcon';
+import { StackOverflowIcon } from '../components/Icon/StackOverflowIcon';
+import { TuringIcon } from '../components/Icon/TuringIcon';
 import EsferaEnergia from '../images/companyLogos/EsferaEnergia.png';
 import EstrategiaEducacional from '../images/companyLogos/EstrategiaEducacional.jpg';
 import Gympass from '../images/companyLogos/Gympass.jpg';
@@ -27,7 +27,16 @@ import UniversityOfNottingham from '../images/companyLogos/UniversityOfNottingha
 import Wabtec from '../images/companyLogos/Wabtec.png';
 import heroImage from '../images/header-background.webp';
 import profilePic from '../images/profilepic.jpg';
-import { About, ContactSection, ContactType, Hero, HomepageMeta, SkillGroup, Social, TimelineItem } from './dataDef';
+import {
+  About,
+  ContactSection,
+  ContactType,
+  Hero,
+  HomepageMeta,
+  SkillGroup,
+  Social,
+  TimelineItemData,
+} from './dataDef';
 
 /**
  * Page meta data
@@ -184,7 +193,7 @@ export const skills: SkillGroup[] = [
 
 const experienceDate = (month: number, year: number): Dayjs => dayjs(`${year}-${month}-01`);
 
-export const experience: TimelineItem[] = [
+export const experience: TimelineItemData[] = [
   {
     title: 'Full Stack Software Engineer',
     dateStart: experienceDate(6, 2023),
@@ -294,7 +303,7 @@ export const experience: TimelineItem[] = [
   },
 ];
 
-export const education: TimelineItem[] = [
+export const education: TimelineItemData[] = [
   {
     title: 'Electronic Engineering',
     dateStart: experienceDate(2, 2012),

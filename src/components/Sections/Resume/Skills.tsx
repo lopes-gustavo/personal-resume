@@ -1,9 +1,10 @@
-import { FC, memo, PropsWithChildren, useMemo } from 'react';
+import { PropsWithChildren, useMemo } from 'react';
 
 import { Skill as SkillType, SkillGroup as SkillGroupType } from '../../../data/dataDef';
 
-export const SkillGroup: FC<PropsWithChildren<{ skillGroup: SkillGroupType }>> = memo(({ skillGroup }) => {
+export const SkillGroup = ({ skillGroup }: PropsWithChildren<{ skillGroup: SkillGroupType }>) => {
   const { name, skills } = skillGroup;
+
   return (
     <div className="flex flex-col">
       <span className="text-center text-lg font-bold">{name}</span>
@@ -14,11 +15,9 @@ export const SkillGroup: FC<PropsWithChildren<{ skillGroup: SkillGroupType }>> =
       </div>
     </div>
   );
-});
+};
 
-SkillGroup.displayName = 'SkillGroup';
-
-export const Skill: FC<{ skill: SkillType }> = memo(({ skill }) => {
+export const Skill = ({ skill }: { skill: SkillType }) => {
   const { name, level, years } = skill;
   const percentage = useMemo(() => Math.round((level / 10) * 100), [level]);
 
@@ -35,6 +34,4 @@ export const Skill: FC<{ skill: SkillType }> = memo(({ skill }) => {
       </div>
     </div>
   );
-});
-
-Skill.displayName = 'Skill';
+};

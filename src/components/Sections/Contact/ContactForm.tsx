@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, FormEvent, memo, useCallback, useMemo, useState } from 'react';
+import { ChangeEvent, FormEvent, useCallback, useMemo, useState } from 'react';
 
 interface FormData {
   name: string;
@@ -6,7 +6,7 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: FC = memo(() => {
+export const ContactForm = () => {
   const defaultData = useMemo(
     () => ({
       name: '',
@@ -73,7 +73,4 @@ const ContactForm: FC = memo(() => {
       </button>
     </form>
   );
-});
-
-ContactForm.displayName = 'ContactForm';
-export default ContactForm;
+};

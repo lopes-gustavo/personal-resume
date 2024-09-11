@@ -1,8 +1,6 @@
-import { FC, memo } from 'react';
+import { Icon, IconProps } from './Icon';
 
-import Icon, { IconProps } from './Icon';
-
-const StackOverflowIcon: FC<IconProps> = memo(props => (
+export const StackOverflowIcon = (props: IconProps) => (
   <Icon {...props}>
     <path d="M90.1875 114.162V83.027H104.062V128H0V83.027H13.875V114.162H90.1875Z" fill="currentColor" />
     <path
@@ -10,6 +8,4 @@ const StackOverflowIcon: FC<IconProps> = memo(props => (
       fill="currentColor"
     />
   </Icon>
-));
-
-export default StackOverflowIcon;
+);
