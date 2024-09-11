@@ -1,5 +1,12 @@
-import {AcademicCapIcon, CalendarIcon, FlagIcon, MapIcon, SparklesIcon, TrophyIcon} from '@heroicons/react/24/outline';
-import dayjs, {Dayjs} from 'dayjs';
+import {
+  AcademicCapIcon,
+  CalendarIcon,
+  FlagIcon,
+  MapIcon,
+  SparklesIcon,
+  TrophyIcon,
+} from '@heroicons/react/24/outline';
+import dayjs, { Dayjs } from 'dayjs';
 
 import ArcDevIcon from '../components/Icon/ArcDevIcon';
 import DevReadyIcon from '../components/Icon/DevReadyIcon';
@@ -10,7 +17,7 @@ import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TuringIcon from '../components/Icon/TuringIcon';
 import heroImage from '../images/header-background.webp';
 import profilePic from '../images/profilepic.jpg';
-import {About, ContactSection, ContactType, Hero, HomepageMeta, SkillGroup, Social, TimelineItem} from './dataDef';
+import { About, ContactSection, ContactType, Hero, HomepageMeta, SkillGroup, Social, TimelineItem } from './dataDef';
 
 /**
  * Page meta data
@@ -43,11 +50,7 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         A Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong>, passionate by technology,
-        with over 7 years of professional experience.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        Outside of work, you can catch me doing sports (mostly Beach Tennis and Volleyball) or hanging out with my
-        friends in the company of a good ale.
+        with over 8 years of professional experience (and an additional 7 as a hobbyist).
       </p>
     </>
   ),
@@ -72,16 +75,24 @@ const birthday = dayjs('1994-04-20');
 const age = dayjs().diff(birthday, 'years');
 export const aboutData: About = {
   profileImageSrc: profilePic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: [
+    'Hello! Welcome to my resume!',
+    `My name's Gustavo Lopes and I'm a Brazilian developer.`,
+    `I've been working on technology for the past 8 years in different positions, like hands-on developer, tech lead and even management. 
+    If you'd like to consider university and hobby projects, there it goes 15 years.`,
+    `I'm more inclined to work on backend (mostly in Node, Go and Python), but I have my share years working with React, Angular and Vue as well.`,
+    `I've been in different industries so far, like Gaming, Health Care, Education, Electrical Engineering and others.`,
+    `I love learning new things and one of my strengths is that I can learn really fast.`,
+    `Outside of work, you can catch me doing sports (currently, beach tennis and volleyball) or hanging out with my friends in the company of a good ale. 🍻`,
+    `Nice to meet you!`,
+  ],
   aboutItems: [
-    {label: 'Working location', text: `Remote | Minas Gerais, Brazil`, Icon: MapIcon},
-    {label: 'Age', text: `${age}`, Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Brazilian', Icon: FlagIcon},
-    {label: 'Hobbies', text: 'Sports, Bars, Friends', Icon: SparklesIcon},
-    {label: 'Study', text: 'Universidade Federal de Juiz de Fora', Icon: AcademicCapIcon},
-    {label: 'Sports', text: 'Beach Tennis, Volleyball, Football', Icon: TrophyIcon},
+    { label: 'Working location', text: `Remote | Minas Gerais, Brazil`, Icon: MapIcon },
+    { label: 'Age', text: `${age}`, Icon: CalendarIcon },
+    { label: 'Nationality', text: 'Brazilian', Icon: FlagIcon },
+    { label: 'Hobbies', text: 'Sports, Bars, Friends', Icon: SparklesIcon },
+    { label: 'Study', text: 'Universidade Federal de Juiz de Fora', Icon: AcademicCapIcon },
+    { label: 'Sports', text: 'Beach Tennis, Volleyball, Football', Icon: TrophyIcon },
   ],
 };
 
@@ -378,9 +389,7 @@ export const experience: TimelineItem[] = [
     dateStart: experienceDate(9, 2016),
     dateEnd: experienceDate(5, 2017),
     location: 'Wabtec Passenger Transit',
-    content: [
-      `Helped analysing application's error logs and trying to find where the issue could be`
-    ],
+    content: [`Helped analysing application's error logs and trying to find where the issue could be`],
     skills: ['C#', '.NET'],
   },
 ];
@@ -405,7 +414,7 @@ export const education: TimelineItem[] = [
  */
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'If you want to get in touch, please use the previous form or contact me by email.',
   items: [
     {
       type: ContactType.Email,
@@ -423,15 +432,15 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/gustavomlopes/'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8038345/gustavo-lopes'},
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/lopes-gustavo'},
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/gustavomlopes/' },
+  { label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8038345/gustavo-lopes' },
+  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/lopes-gustavo' },
   {
     label: 'Turing',
     Icon: TuringIcon,
     href: 'https://matching.turing.com/developer-resume/1b8d51d4d21fdfbb3deb46b9654a0b1b5812af68937b46',
   },
-  {label: 'Arc.dev', Icon: ArcDevIcon, href: 'https://arc.dev/@lopesgustavo'},
-  {label: 'DevReady', Icon: DevReadyIcon, href: 'https://profile.devready.io/developers/gustavo-moraes-l'},
-  {label: 'Himalayas', Icon: HimalayasIcon, href: 'https://himalayas.app/@gustavolopes'},
+  { label: 'Arc.dev', Icon: ArcDevIcon, href: 'https://arc.dev/@lopesgustavo' },
+  { label: 'DevReady', Icon: DevReadyIcon, href: 'https://profile.devready.io/developers/gustavo-moraes-l' },
+  { label: 'Himalayas', Icon: HimalayasIcon, href: 'https://himalayas.app/@gustavolopes' },
 ];
