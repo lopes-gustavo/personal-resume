@@ -16,7 +16,7 @@ const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
   return (
     <div className="flex flex-col pb-8 text-left last:pb-0">
       <div className="flex gap-3 items-center pb-4 relative">
-        <Image alt="" height={33} objectFit="cover" src={url} width={33} />
+        <Image alt="" height={33} src={url} width={33} />
 
         <div className="flex flex-col justify-items-center">
           <h2 className="text-xl font-bold">{title}</h2>

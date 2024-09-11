@@ -68,12 +68,10 @@ export const heroData: Hero = {
     {
       href: `#${SectionId.Resume}`,
       text: 'Resume',
-      primary: false,
     },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
-      primary: false,
     },
   ],
 };

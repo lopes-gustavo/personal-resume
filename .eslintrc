@@ -2,9 +2,7 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
+    "ecmaFeatures": { "jsx": true },
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
@@ -22,34 +20,24 @@
     "react/jsx-curly-brace-presence": [2, "never"],
     "react/jsx-no-duplicate-props": "error",
     "react/jsx-sort-props": "error",
-    "react/jsx-closing-bracket-location": ["error", {
-      "nonEmpty": "line-aligned",
-      "selfClosing": "line-aligned"
-    }],
+    "react/jsx-closing-bracket-location": ["error", { "nonEmpty": "line-aligned", "selfClosing": "line-aligned" }],
     "react/react-in-jsx-scope": "off",
     "react/no-unescaped-entities": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "react-memo/require-usememo": "error",
-    "react-memo/require-memo": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/member-ordering": [
-      "error",
-      {
-        "interfaces": ["signature", "method", "constructor", "field"],
-        "typeLiterals": ["signature", "method", "constructor", "field"]
-      }
-    ],
+    "@typescript-eslint/member-ordering": ["error", {
+      "interfaces": ["signature", "method", "constructor", "field"],
+      "typeLiterals": ["signature", "method", "constructor", "field"]
+    }],
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
     "import/order": "off",
     "jsx-quotes": ["error", "prefer-double"],
     "no-irregular-whitespace": "off",
-    "quotes": ["error", "single", {
-      "avoidEscape": true,
-      "allowTemplateLiterals": true
-    }],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "@typescript-eslint/no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}],
     "@next/next/no-img-element": "off",
     "object-curly-spacing": ["error", "always"],
@@ -68,15 +56,11 @@
   "overrides": [
     {
       "files": ["**/*.tsx"],
-      "rules": {
-        "react/prop-types": "off"
-      }
+      "rules": { "react/prop-types": "off" }
     },
     {
       "files": ["**/*.js"],
-      "rules": {
-        "@typescript-eslint/no-var-requires": "off"
-      }
+      "rules": { "@typescript-eslint/no-var-requires": "off" }
     }
   ]
 }

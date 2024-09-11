@@ -6,15 +6,6 @@ import { IconProps } from '../components/Icon/Icon';
 export interface HomepageMeta {
   title: string;
   description: string;
-  ogImageUrl?: string;
-  twitterCardType?: 'summary' | 'summary_large';
-  twitterTitle?: string;
-  twitterSite?: string;
-  twitterCreator?: string;
-  twitterDomain?: string;
-  twitterUrl?: string;
-  twitterDescription?: string;
-  twitterImageUrl?: string;
 }
 
 /**
@@ -30,8 +21,6 @@ export interface Hero {
 interface HeroActionItem {
   href: string;
   text: string;
-  primary?: boolean;
-  Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
 
 /**
