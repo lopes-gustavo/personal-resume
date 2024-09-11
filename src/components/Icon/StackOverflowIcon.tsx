@@ -1,6 +1,6 @@
-import {FC, memo} from 'react';
+import { FC, memo } from 'react';
 
-import Icon, {IconProps} from './Icon';
+import Icon, { IconProps } from './Icon';
 
 const StackOverflowIcon: FC<IconProps> = memo(props => (
   <Icon {...props}>

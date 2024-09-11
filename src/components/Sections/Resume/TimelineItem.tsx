@@ -1,9 +1,8 @@
-import {FC, memo} from 'react';
+import { FC, memo } from 'react';
 
-import {TimelineItem} from '../../../data/dataDef';
+import type { TimelineItem } from '../../../data/dataDef';
 
-const Chip: FC<{value: string}
-> = memo(({value}) => {
+const Chip: FC<{ value: string }> = memo(({ value }) => {
   return (
     <div className="m-1 flex items-center justify-center rounded-full px-2 py-1 text-base font-medium border border-gray-400 select-none">
       <div className="max-w-full flex-initial text-xs font-normal leading-none">{value}</div>
@@ -11,8 +10,8 @@ const Chip: FC<{value: string}
   );
 });
 
-const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
-  const {title, dateStart, dateEnd, location, content, skills} = item;
+const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
+  const { title, dateStart, dateEnd, location, content, skills } = item;
   return (
     <div className="flex flex-col pb-8 text-left last:pb-0">
       <div className="flex flex-col pb-4">
@@ -27,19 +26,10 @@ const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
       </div>
 
       <div>
-        <ul className="list-inside list-disc">
-          {content?.map(e => (
-            <li>{e}</li>
-          ))}
-        </ul>
+        <ul className="list-inside list-disc">{content?.map(e => <li>{e}</li>)}</ul>
       </div>
 
-      <div className="flex flex-row flex-wrap mx-auto mt-3">
-        {skills?.map(s => (
-          <Chip value={s} />
-        ))}
-      </div>
-
+      <div className="flex flex-row flex-wrap mx-auto mt-3">{skills?.map(s => <Chip value={s} />)}</div>
     </div>
   );
 });

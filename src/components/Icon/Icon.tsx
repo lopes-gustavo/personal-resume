@@ -1,11 +1,11 @@
-import {FC, HTMLAttributes, memo, Ref} from 'react';
+import { FC, HTMLAttributes, memo, Ref } from 'react';
 
 export interface IconProps extends HTMLAttributes<SVGSVGElement> {
   svgRef?: Ref<SVGSVGElement>;
   transform?: string;
 }
 
-const Icon: FC<IconProps> = memo(({children, className, svgRef, transform, ...props}) => (
+const Icon: FC<IconProps> = memo(({ children, className, svgRef, transform, ...props }) => (
   <svg
     className={className}
     fill="currentColor"
@@ -14,7 +14,8 @@ const Icon: FC<IconProps> = memo(({children, className, svgRef, transform, ...pr
     viewBox="0 0 128 128"
     width="128"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}>
+    {...props}
+  >
     {children}
   </svg>
 ));

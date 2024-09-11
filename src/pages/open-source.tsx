@@ -1,5 +1,5 @@
-import {Analytics} from '@vercel/analytics/react';
-import {FC, memo} from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { FC, memo } from 'react';
 
 const Home: FC = memo(() => {
   return (
