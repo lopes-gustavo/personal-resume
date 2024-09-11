@@ -71,8 +71,11 @@ export interface TimelineItem {
   dateEnd: Dayjs | null;
   location: string;
   title: string;
-  content?: string[];
-  skills?: string[];
+}
+
+export interface ExperienceTimelineItem extends TimelineItem {
+  content: string[];
+  skills: string[];
 }
 
 /**

@@ -17,14 +17,24 @@ import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TuringIcon from '../components/Icon/TuringIcon';
 import heroImage from '../images/header-background.webp';
 import profilePic from '../images/profilepic.jpg';
-import { About, ContactSection, ContactType, Hero, HomepageMeta, SkillGroup, Social, TimelineItem } from './dataDef';
+import {
+  About,
+  ContactSection,
+  ContactType,
+  ExperienceTimelineItem,
+  Hero,
+  HomepageMeta,
+  SkillGroup,
+  Social,
+  TimelineItem,
+} from './dataDef';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Gustavo Lopes Resume',
-  description: "Gustavo Lopes's personal resume written in React",
+  description: "Gustavo Lopes' personal resume written in React",
 };
 
 /**
@@ -103,208 +113,92 @@ export const skills: SkillGroup[] = [
   {
     name: 'Backend development',
     skills: [
-      {
-        name: 'Node.js',
-        level: 9,
-        years: 7,
-      },
-      {
-        name: 'Golang',
-        level: 8,
-        years: 2,
-      },
-      {
-        name: 'Nest.js',
-        level: 8,
-        years: 2,
-      },
-      {
-        name: 'Python',
-        level: 7,
-        years: 4,
-      },
-      {
-        name: 'Java',
-        level: 5,
-        years: 1,
-      },
-      {
-        name: 'Ruby',
-        level: 4,
-        years: 1,
-      },
+      { name: 'Node.js', level: 9, years: 7 },
+      { name: 'Golang', level: 8, years: 2 },
+      { name: 'Nest.js', level: 8, years: 2 },
+      { name: 'Python', level: 7, years: 4 },
+      { name: 'Java', level: 5, years: 1 },
+      { name: 'Ruby', level: 4, years: 1 },
     ],
   },
   {
     name: 'Backend tools',
     skills: [
-      {
-        name: 'Terraform',
-        level: 8,
-        years: 5,
-      },
-      {
-        name: 'Docker',
-        level: 7,
-        years: 5,
-      },
-      {
-        name: 'Kubernetes',
-        level: 5,
-        years: 1,
-      },
-      {
-        name: 'RabbitMQ',
-        level: 5,
-        years: 3,
-      },
-      {
-        name: 'SNS/SQS',
-        level: 5,
-        years: 3,
-      },
+      { name: 'Terraform', level: 8, years: 5 },
+      { name: 'Docker', level: 7, years: 5 },
+      { name: 'Kubernetes', level: 5, years: 1 },
+      { name: 'RabbitMQ', level: 5, years: 3 },
+      { name: 'SNS/SQS', level: 5, years: 3 },
     ],
   },
-
   {
     name: 'Frontend development',
     skills: [
-      {
-        name: 'Typescript',
-        level: 9,
-        years: 6,
-      },
-      {
-        name: 'Angular',
-        level: 9,
-        years: 5,
-      },
-      {
-        name: 'Vue',
-        level: 8,
-        years: 2,
-      },
-      {
-        name: 'React',
-        level: 7,
-        years: 2,
-      },
-      {
-        name: 'Next.js',
-        level: 7,
-        years: 2,
-      },
+      { name: 'Typescript', level: 9, years: 6 },
+      { name: 'Angular', level: 9, years: 5 },
+      { name: 'Vue', level: 8, years: 2 },
+      { name: 'React', level: 7, years: 2 },
+      { name: 'Next.js', level: 7, years: 2 },
     ],
   },
   {
     name: 'Mobile development',
     skills: [
-      {
-        name: 'Ionic',
-        level: 8,
-        years: 2,
-      },
-      {
-        name: 'Flutter',
-        level: 6,
-        years: 2,
-      },
+      { name: 'Ionic', level: 8, years: 2 },
+      { name: 'Flutter', level: 6, years: 2 },
     ],
   },
   {
     name: 'Cloud Development',
     skills: [
-      {
-        name: 'AWS',
-        level: 8,
-        years: 5,
-      },
-      {
-        name: 'Firebase',
-        level: 8,
-        years: 6,
-      },
-      {
-        name: 'GCP',
-        level: 7,
-        years: 2,
-      },
-      {
-        name: 'Azure',
-        level: 5,
-        years: 1,
-      },
+      { name: 'AWS', level: 8, years: 5 },
+      { name: 'Firebase', level: 8, years: 6 },
+      { name: 'GCP', level: 7, years: 2 },
+      { name: 'Azure', level: 5, years: 1 },
     ],
   },
   {
     name: 'Databases',
     skills: [
-      {
-        name: 'Postgres',
-        level: 8,
-        years: 5,
-      },
-      {
-        name: 'MySQL',
-        level: 7,
-        years: 2,
-      },
-      {
-        name: 'Redis',
-        level: 7,
-        years: 4,
-      },
-      {
-        name: 'DynamoDB',
-        level: 5,
-        years: 2,
-      },
-      {
-        name: 'MongoDB',
-        level: 5,
-        years: 1,
-      },
-      {
-        name: 'OracleDB',
-        level: 4,
-        years: 1,
-      },
+      { name: 'Postgres', level: 8, years: 5 },
+      { name: 'MySQL', level: 7, years: 2 },
+      { name: 'Redis', level: 7, years: 4 },
+      { name: 'DynamoDB', level: 5, years: 2 },
+      { name: 'MongoDB', level: 5, years: 1 },
+      { name: 'OracleDB', level: 4, years: 1 },
     ],
   },
   {
     name: 'DevOps',
     skills: [
-      {
-        name: 'Github Actions',
-        level: 8,
-        years: 2,
-      },
-      {
-        name: 'Azure DevOps',
-        level: 7,
-        years: 1,
-      },
+      { name: 'Github Actions', level: 8, years: 2 },
+      { name: 'Azure DevOps', level: 7, years: 1 },
     ],
   },
   {
     name: 'Testing',
     skills: [
-      {
-        name: 'Cypress',
-        level: 6,
-        years: 3,
-      },
-      {
-        name: 'Playwright',
-        level: 5,
-        years: 1,
-      },
+      { name: 'Cypress', level: 6, years: 3 },
+      { name: 'Playwright', level: 5, years: 1 },
     ],
   },
 ];
 
 const experienceDate = (month: number, year: number): Dayjs => dayjs(`${year}-${month}-01`);
-export const experience: TimelineItem[] = [
+
+export const experience: ExperienceTimelineItem[] = [
+  {
+    title: 'Full Stack Software Engineer',
+    dateStart: experienceDate(6, 2023),
+    dateEnd: experienceDate(9, 2024),
+    location: 'Redemption Games',
+    content: [
+      `Lead engineer on the backend side of the company's mobile app games`,
+      `Sole engineer responsible for the internal company CMS tool, using React + Typescript`,
+      `Responsible for multiple CI/CD pipelines in the company`,
+    ],
+    skills: ['Node.js', 'Typescript', 'Javascript', 'Firebase', 'GCP', 'Github Actions'],
+  },
   {
     title: 'Lead Software Engineer / Engineering Manager',
     dateStart: experienceDate(4, 2022),

@@ -1,6 +1,6 @@
 import { FC, memo } from 'react';
 
-import type { TimelineItem } from '../../../data/dataDef';
+import type { ExperienceTimelineItem } from '../../../data/dataDef';
 
 const Chip: FC<{ value: string }> = memo(({ value }) => {
   return (
@@ -10,7 +10,7 @@ const Chip: FC<{ value: string }> = memo(({ value }) => {
   );
 });
 
-const TimelineItem: FC<{ item: TimelineItem }> = memo(({ item }) => {
+const TimelineItem: FC<{ item: ExperienceTimelineItem }> = memo(({ item }) => {
   const { title, dateStart, dateEnd, location, content, skills } = item;
   return (
     <div className="flex flex-col pb-8 text-left last:pb-0">
