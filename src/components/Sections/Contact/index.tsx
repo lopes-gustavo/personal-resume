@@ -44,6 +44,7 @@ export default function Contact() {
                       <a
                         className="-m-2 flex rounded-md p-2 text-neutral-300 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         href={href}
+                        rel="noreferrer"
                         target="_blank"
                       >
                         <Icon aria-hidden="true" className="h-4 w-4 flex-shrink-0 text-neutral-100 sm:h-5 sm:w-5" />

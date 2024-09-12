@@ -33,10 +33,10 @@ export const TimelineItem = ({ item }: { item: TimelineItemData }) => {
       </div>
 
       <div>
-        <ul className="list-inside list-disc">{content?.map(e => <li>{e}</li>)}</ul>
+        <ul className="list-inside list-disc">{content?.map(e => <li key={e}>{e}</li>)}</ul>
       </div>
 
-      <div className="flex flex-row flex-wrap mx-auto mt-3">{skills?.map(s => <Chip value={s} />)}</div>
+      <div className="flex flex-row flex-wrap mx-auto mt-3">{skills?.map(s => <Chip key={s} value={s} />)}</div>
     </div>
   );
 };
