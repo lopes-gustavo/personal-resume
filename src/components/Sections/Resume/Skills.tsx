@@ -1,4 +1,4 @@
-import { PropsWithChildren, useMemo } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { Skill as SkillType, SkillGroup as SkillGroupType } from '../../../data/dataDef';
 
@@ -19,7 +19,7 @@ export const SkillGroup = ({ skillGroup }: PropsWithChildren<{ skillGroup: Skill
 
 export const Skill = ({ skill }: { skill: SkillType }) => {
   const { name, level, years } = skill;
-  const percentage = useMemo(() => Math.round((level / 10) * 100), [level]);
+  const percentage = Math.round((level / 10) * 100);
 
   return (
     <div className="flex flex-col">

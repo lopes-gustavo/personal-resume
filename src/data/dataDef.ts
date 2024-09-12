@@ -78,7 +78,6 @@ export interface ContactSection {
 export const ContactType = {
   Email: 'Email',
   Phone: 'Phone',
-  Location: 'Location',
 } as const;
 
 export type ContactType = (typeof ContactType)[keyof typeof ContactType];

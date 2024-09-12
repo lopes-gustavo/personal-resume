@@ -325,7 +325,7 @@ export const education: TimelineItemData[] = [
  */
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'If you want to get in touch, please use the previous form or contact me by email.',
+  description: 'To get in touch, please use the following contact info:',
   items: [
     {
       type: ContactType.Email,
@@ -333,8 +333,9 @@ export const contact: ContactSection = {
       href: 'mailto:lopes.gustavojf@gmail.com',
     },
     {
-      type: ContactType.Location,
-      text: 'Minas Gerais, Brazil',
+      type: ContactType.Phone,
+      text: '+55 32 99978-8822',
+      href: 'tel:+5532999788822',
     },
   ],
 };

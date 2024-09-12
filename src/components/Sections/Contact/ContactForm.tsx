@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useCallback, useMemo, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
 interface FormData {
   name: string;
@@ -7,38 +7,18 @@ interface FormData {
 }
 
 export const ContactForm = () => {
-  const defaultData = useMemo(
-    () => ({
-      name: '',
-      email: '',
-      message: '',
-    }),
-    [],
-  );
+  const [data, setData] = useState<FormData>({ name: '', email: '', message: '' });
 
-  const [data, setData] = useState<FormData>(defaultData);
+  function onChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const { name, value } = event.target;
 
-  const onChange = useCallback(
-    <T extends HTMLInputElement | HTMLTextAreaElement>(event: ChangeEvent<T>): void => {
-      const { name, value } = event.target;
+    setData({ ...data, [name]: value });
+  }
 
-      const fieldData: Partial<FormData> = { [name]: value };
-
-      setData({ ...data, ...fieldData });
-    },
-    [data],
-  );
-
-  const handleSendMessage = useCallback(
-    async (event: FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
-    },
-    [data],
-  );
+  async function handleSendMessage(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    console.log('Data to send: ', data);
+  }
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';

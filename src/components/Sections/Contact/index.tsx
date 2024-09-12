@@ -1,5 +1,4 @@
-import { DevicePhoneMobileIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
-import classNames from 'classnames';
+import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 import { contact, SectionId } from '../../../data/data';
 import { ContactType, ContactValue } from '../../../data/dataDef';
@@ -9,14 +8,16 @@ import { ContactForm } from './ContactForm';
 const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Email]: { Icon: EnvelopeIcon, srLabel: 'Email' },
   [ContactType.Phone]: { Icon: DevicePhoneMobileIcon, srLabel: 'Phone' },
-  [ContactType.Location]: { Icon: MapPinIcon, srLabel: 'Location' },
 };
+
+// TODO: Enable this once email is working
+const displayContactForm = false;
 
 export default function Contact() {
   const { headerText, description, items } = contact;
 
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Contact}>
+    <Section sectionId={SectionId.Contact}>
       <div className="flex flex-col gap-y-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
@@ -24,9 +25,11 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="order-2 col-span-1 md:order-1 ">
-            <ContactForm />
-          </div>
+          {displayContactForm && (
+            <div className="order-2 col-span-1 md:order-1 ">
+              <ContactForm />
+            </div>
+          )}
 
           <div className="order-1 col-span-1 flex flex-col gap-y-4 md:order-2">
             <p className="prose leading-6 text-neutral-300">{description}</p>
@@ -39,10 +42,7 @@ export default function Contact() {
                     <dt className="sr-only">{srLabel}</dt>
                     <dd className="flex items-center">
                       <a
-                        className={classNames(
-                          '-m-2 flex rounded-md p-2 text-neutral-300 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500',
-                          { 'hover:text-white': href },
-                        )}
+                        className="-m-2 flex rounded-md p-2 text-neutral-300 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         href={href}
                         target="_blank"
                       >
