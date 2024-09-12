@@ -1,4 +1,3 @@
-/* eslint-env node */
 // @ts-check
 
 /** @type {import('next').NextConfig} */

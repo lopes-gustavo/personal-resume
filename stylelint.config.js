@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 module.exports = {
   extends: ['stylelint-config-recommended', 'stylelint-order'],
   plugins: ['stylelint-prettier', 'stylelint-order'],
